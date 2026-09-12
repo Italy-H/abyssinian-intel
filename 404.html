@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404 — No Record Located | Abyssinian Intel</title>
+<meta name="description" content="The requested resource was not located. Vantage Point Investigations — open-source intelligence and analysis.">
+<meta name="theme-color" content="#0B0C10">
+<meta name="robots" content="noindex, follow">
+<!-- ==========================================================================
+     ///  SITE ROOT — CHANGE THIS ONE LINE WHEN YOU DEPLOY  ///
+     --------------------------------------------------------------------------
+     This page is the only one on the site that cannot work out where it lives.
+     A live host serves 404.html for ANY unmatched URL while leaving the
+     requested address in the bar (a miss at /a/b/c stays at /a/b/c), so
+     relative links would resolve against /a/b/ and break. <base> pins them.
+
+       Local preview (IDE server, file at /OSINT/404.html)  ->  "./"   <-- CURRENT
+       Live on custom domain  abyssinianintel.com           ->  "/"
+       GitHub project site    user.github.io/REPO/          ->  "/REPO/"
+
+     "./" is correct ONLY while previewing, because your IDE opens this file at
+     its own real path. It will NOT work once deployed, where this page is served
+     for URLs that do not exist. Set it to "/" before you push to production.
+     ========================================================================== -->
+<base href="/">
+
+<link rel="icon" href="assets/Logo1.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- ==========================================================================
+     SELF-CONTAINED STYLES
+     --------------------------------------------------------------------------
+     This page deliberately does NOT link assets/css/style.css.
+
+     GitHub Pages serves 404.html for ANY unmatched path while leaving the
+     requested URL in the address bar — a miss at /services/tier-4/foo would
+     resolve a relative stylesheet href to /services/tier-4/assets/css/style.css
+     and render the error page unstyled. Inlining the subset this page needs
+     means the 404 always looks like the site, at any URL depth.
+
+     Tokens below are copied verbatim from assets/css/style.css — if you change
+     the palette there, mirror it here.
+     ========================================================================== -->
+<style>
+:root {
+  --obsidian:   #0B0C10;
+  --obsidian-2: #101218;
+  --gunmetal:   #1F2833;
+  --copper:     #C5A059;
+  --bronze:     #E0A96D;
+  --cyan:       #45E0D0;
+  --bone:       #C5C6C7;
+  --bone-dim:   #8A8F94;
+  --danger:     #D9534F;
+  --metal-grad: linear-gradient(135deg,#8C6A34 0%,#C5A059 35%,#F0D9A8 50%,#C5A059 65%,#8C6A34 100%);
+  --edge:       1px solid rgba(197,160,89,.22);
+  --edge-soft:  1px solid rgba(197,198,199,.10);
+  --font-display:"Rajdhani","Oswald","Arial Narrow",sans-serif;
+  --font-body:  "Inter","Segoe UI",system-ui,-apple-system,sans-serif;
+  --font-mono:  "JetBrains Mono","IBM Plex Mono","Consolas",monospace;
+  --radius: 4px;
+}
+*,*::before,*::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--obsidian);
+  color: var(--bone);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--bronze); text-decoration: none; transition: color .2s ease; }
+a:hover { color: var(--cyan); }
+h1,h2,h3 { font-family: var(--font-display); font-weight: 700; letter-spacing: .02em; line-height: 1.18; margin: 0 0 .6em; color: #EDEDEE; }
+p { margin: 0 0 1.1em; }
+.wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding-inline: 22px; }
+.metal { background: var(--metal-grad); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+.mono { font-family: var(--font-mono); }
+.dim { color: var(--bone-dim); }
+.small { font-size: .85rem; }
+:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+
+/* Backdrop */
+.backdrop {
+  position: fixed; inset: 0; z-index: -2; pointer-events: none;
+  background:
+    radial-gradient(900px 600px at 50% -10%, rgba(69,224,208,.07), transparent 70%),
+    radial-gradient(700px 500px at 85% 15%, rgba(197,160,89,.06), transparent 70%),
+    linear-gradient(rgba(197,198,199,.030) 1px, transparent 1px) 0 0 / 100% 42px,
+    linear-gradient(90deg, rgba(197,198,199,.030) 1px, transparent 1px) 0 0 / 42px 100%,
+    var(--obsidian);
+}
+.backdrop::after {
+  content: ""; position: absolute; inset: 0; height: 55%;
+  background: linear-gradient(180deg, transparent 0%, rgba(69,224,208,.045) 50%, transparent 100%);
+  animation: sweep 14s linear infinite;
+}
+@keyframes sweep {
+  0% { transform: translateY(-60%); opacity: 0; }
+  15%,85% { opacity: 1; }
+  100% { transform: translateY(160%); opacity: 0; }
+}
+
+/* Header */
+.site-header {
+  background: rgba(11,12,16,.86);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: var(--edge);
+}
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 72px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: .8rem; }
+.brand__mark {
+  width: 46px; height: 46px; border-radius: 50%;
+  object-fit: cover; object-position: center 42%;
+  border: 1px solid rgba(197,160,89,.5);
+  box-shadow: 0 0 18px rgba(69,224,208,.28);
+  flex: none;
+}
+.brand__text { display: flex; flex-direction: column; line-height: 1.05; }
+.brand__name { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; letter-spacing: .17em; text-transform: uppercase; color: #EDEDEE; }
+.brand__sub { font-family: var(--font-mono); font-size: .58rem; letter-spacing: .17em; text-transform: uppercase; color: var(--bone-dim); margin-top: 3px; }
+.nav__links { display: flex; align-items: center; gap: .35rem; flex-wrap: wrap; }
+.nav__links a {
+  font-family: var(--font-mono); font-size: .74rem; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--bone-dim); padding: .55rem .8rem; border: 1px solid transparent; border-radius: var(--radius);
+  transition: all .2s ease;
+}
+.nav__links a:hover { color: var(--bone); border-color: rgba(197,160,89,.28); }
+
+/* Main */
+main { flex: 1; display: flex; align-items: center; padding-block: clamp(2.5rem, 7vw, 5rem); }
+.eyebrow { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .28em; text-transform: uppercase; color: var(--cyan); display: block; margin-bottom: .9rem; }
+.code {
+  font-family: var(--font-display);
+  font-size: clamp(4.5rem, 17vw, 11rem);
+  font-weight: 700; line-height: .88; letter-spacing: .02em;
+  margin: 0 0 .1em;
+}
+.err-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(2rem, 5vw, 3.5rem); align-items: center; }
+@media (max-width: 900px) { .err-grid { grid-template-columns: 1fr; } }
+
+/* Failed-query terminal readout */
+.query-log {
+  background: linear-gradient(180deg, rgba(31,40,51,.72), rgba(11,12,16,.94));
+  border: var(--edge);
+  border-left: 3px solid var(--danger);
+  border-radius: var(--radius);
+  padding: 1.3rem 1.4rem;
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  letter-spacing: .04em;
+  line-height: 1.9;
+  overflow-x: auto;
+}
+.query-log__head {
+  font-size: .68rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--bone-dim); padding-bottom: .8rem; margin-bottom: .8rem;
+  border-bottom: var(--edge-soft);
+  display: flex; align-items: center; gap: .6rem;
+}
+.query-log__head::before {
+  content: ""; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--danger); box-shadow: 0 0 10px var(--danger);
+  animation: blip 1.6s ease-in-out infinite; flex: none;
+}
+@keyframes blip { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
+.ln { display: block; white-space: nowrap; }
+.ln .k { color: var(--bone-dim); }
+.ln .ok { color: var(--cyan); }
+.ln .no { color: #E88B87; }
+.ln .v { color: var(--bone); }
+.ln .path { color: var(--bronze); word-break: break-all; white-space: normal; }
+.cursor {
+  display: inline-block; width: 8px; height: 1em; vertical-align: -2px;
+  background: var(--cyan); animation: blink 1.1s step-end infinite;
+}
+@keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+  font-family: var(--font-mono); font-size: .78rem; letter-spacing: .15em; text-transform: uppercase;
+  padding: .95rem 1.5rem; border-radius: var(--radius);
+  border: 1px solid rgba(197,160,89,.45); cursor: pointer; text-align: center;
+  transition: transform .18s ease, box-shadow .25s ease, border-color .2s ease, color .2s ease;
+}
+.btn--primary {
+  background: linear-gradient(135deg,#A67C3A 0%,#C5A059 45%,#E0A96D 100%);
+  color: #14100A; font-weight: 700; border-color: transparent;
+  box-shadow: 0 0 22px rgba(197,160,89,.22);
+}
+.btn--primary:hover { transform: translateY(-2px); color: #14100A; box-shadow: 0 0 30px rgba(224,169,109,.4); }
+.btn--ghost { background: transparent; color: var(--bone); }
+.btn--ghost:hover { transform: translateY(-2px); border-color: var(--cyan); color: var(--cyan); box-shadow: 0 0 18px rgba(69,224,208,.28); }
+.btn-row { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 1.8rem; }
+
+/* Route cards */
+.routes { display: grid; grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); gap: .9rem; margin-top: 2.6rem; }
+.route {
+  display: block;
+  background: linear-gradient(160deg, rgba(31,40,51,.78), rgba(16,18,24,.9));
+  border: var(--edge); border-radius: var(--radius);
+  padding: 1.1rem 1.15rem; color: inherit; position: relative; overflow: hidden;
+  transition: transform .22s ease, border-color .22s ease, box-shadow .25s ease;
+}
+.route::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: var(--metal-grad); opacity: .55; transition: opacity .25s ease;
+}
+.route:hover { transform: translateY(-4px); border-color: rgba(69,224,208,.35); box-shadow: 0 16px 40px rgba(0,0,0,.5); color: inherit; }
+.route:hover::before { opacity: 1; }
+.route__label { font-family: var(--font-mono); font-size: .64rem; letter-spacing: .2em; text-transform: uppercase; color: var(--copper); display: block; margin-bottom: .4rem; }
+.route__title { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: #EDEDEE; margin-bottom: .25rem; }
+.route__desc { font-size: .82rem; color: var(--bone-dim); line-height: 1.5; }
+
+/* Notice */
+.notice {
+  border-radius: var(--radius); padding: 1.1rem 1.25rem; font-size: .9rem; line-height: 1.6;
+  border: 1px solid rgba(69,224,208,.32); background: rgba(69,224,208,.06); margin-top: 2.6rem;
+}
+.notice__title { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--cyan); display: block; margin-bottom: .45rem; }
+.notice p:last-child { margin-bottom: 0; }
+
+/* Footer */
+.site-footer { border-top: var(--edge); background: linear-gradient(180deg, rgba(16,18,24,.6), rgba(11,12,16,1)); padding-block: 2.2rem 1.6rem; }
+.legal { font-size: .8rem; line-height: 1.7; color: var(--bone-dim); }
+.legal strong { color: var(--bronze); }
+.colophon {
+  margin-top: 1.2rem; padding-top: 1rem; border-top: var(--edge-soft);
+  display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  font-family: var(--font-mono); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase;
+}
+
+/* Phone nav: this page has no hamburger (it must work with zero dependencies),
+   so the links compact into one tidy row instead of sprawling over two.
+   Below 560px they drop out entirely — the four route cards in the body
+   already lead everywhere the nav does, and the logo still links home. */
+@media (max-width: 780px) {
+  .nav { justify-content: center; gap: .6rem; }
+  .nav__links { justify-content: center; gap: .15rem; }
+  .nav__links a { padding: .45rem .5rem; font-size: .62rem; letter-spacing: .1em; }
+}
+@media (max-width: 560px) {
+  .nav__links { display: none; }
+  .nav { justify-content: flex-start; min-height: 64px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,*::before,*::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="backdrop" aria-hidden="true"></div>
+
+<!-- ====================== HEADER ====================== -->
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Abyssinian Intel — home">
+      <img class="brand__mark" src="assets/Logo1.jpg" alt="Abyssinian Intel emblem">
+      <span class="brand__text">
+        <span class="brand__name">Abyssinian Intel</span>
+        <span class="brand__sub">Vantage Point Investigations</span>
+      </span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services &amp; Pricing</a>
+      <a href="reports.html">Sample Dossiers</a>
+      <a href="intake.html">Client Intake</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ====================== MAIN ====================== -->
+<main>
+  <div class="wrap">
+
+    <div class="err-grid">
+
+      <!-- Left: the error itself -->
+      <div>
+        <span class="eyebrow">Archive Query // Terminated</span>
+        <h1 class="code metal">404</h1>
+        <h2>No Record Located</h2>
+        <p class="dim" style="max-width:52ch">
+          The resource you requested does not exist at this address — it may have been moved,
+          renamed, or never published. Nothing is wrong with your connection, and nothing was
+          logged against you.
+        </p>
+
+        <div class="btn-row">
+          <a class="btn btn--primary" href="index.html">Return to Home</a>
+          <a class="btn btn--ghost" href="services.html">Browse Services</a>
+        </div>
+      </div>
+
+      <!-- Right: failed-lookup terminal readout -->
+      <div class="query-log" role="status" aria-live="polite">
+        <div class="query-log__head">Lookup Failure — Archive Terminal</div>
+        <span class="ln"><span class="k">QUERY&nbsp;&nbsp;&nbsp;</span> <span class="path" id="req-path">/unknown-resource</span></span>
+        <span class="ln"><span class="k">STATUS&nbsp;&nbsp;</span> <span class="no">404 — NOT FOUND</span></span>
+        <span class="ln"><span class="k">INDEX&nbsp;&nbsp;&nbsp;</span> <span class="v">abyssinianintel.com</span></span>
+        <span class="ln"><span class="k">SOURCES&nbsp;</span> <span class="v">4 searched</span></span>
+        <span class="ln"><span class="k">MATCHES&nbsp;</span> <span class="no">0 returned</span></span>
+        <span class="ln"><span class="k">RATING&nbsp;&nbsp;</span> <span class="no">UNVERIFIED</span></span>
+        <span class="ln"><span class="k">CHANNEL&nbsp;</span> <span class="ok">INTAKE OPERATIONAL</span></span>
+        <span class="ln"><span class="k">ACTION&nbsp;&nbsp;</span> <span class="ok">REROUTE ADVISED</span> <span class="cursor" aria-hidden="true"></span></span>
+      </div>
+
+    </div>
+
+    <!-- Reroute cards -->
+    <div class="routes">
+      <a class="route" href="index.html">
+        <span class="route__label">Route 01</span>
+        <div class="route__title">Home</div>
+        <div class="route__desc">Who we are, how we work, and the three principles every engagement runs on.</div>
+      </a>
+      <a class="route" href="services.html">
+        <span class="route__label">Route 02</span>
+        <div class="route__title">Services &amp; Pricing</div>
+        <div class="route__desc">Six engagement tiers with transparent, published rates.</div>
+      </a>
+      <a class="route" href="reports.html">
+        <span class="route__label">Route 03</span>
+        <div class="route__title">Sample Dossiers</div>
+        <div class="route__desc">Four demonstration case files showing exactly how we report.</div>
+      </a>
+      <a class="route" href="intake.html">
+        <span class="route__label">Route 04</span>
+        <div class="route__title">Client Intake</div>
+        <div class="route__desc">Submit a case scope for complimentary review under confidentiality.</div>
+      </a>
+    </div>
+
+    <!-- Callback to the confidence model on reports.html -->
+    <div class="notice">
+      <span class="notice__title">Analyst's Note</span>
+      <p class="mb-0">
+        Absence of a record is not proof of absence. If you arrived here from a link we published
+        and believe the page should exist, tell us where the link was and we will repair it —
+        <a href="mailto:contact@abyssinianintel.com">contact@abyssinianintel.com</a>.
+      </p>
+    </div>
+
+  </div>
+</main>
+
+<!-- ====================== FOOTER ====================== -->
+<footer class="site-footer">
+  <div class="wrap legal">
+    <p>
+      <strong>Non-PI Disclaimer.</strong> Vantage Point Investigations, operating under the Abyssinian Intel
+      brand, provides open-source intelligence (OSINT), public record analysis, digital footprint research,
+      and analytical consulting services. <strong>We are not licensed private investigators, and our services
+      do not constitute licensed private investigative work.</strong> We do not conduct surveillance, pretexting,
+      undercover operations, or any activity requiring a private investigator's license. All research is conducted
+      strictly in compliance with applicable laws and privacy regulations, and exclusively for lawful purposes.
+      All client communications and case files are held in strict confidence. Nothing on this site is legal advice.
+      Full terms: <a href="intake.html#terms">Terms &amp; Lawful Use</a>.
+    </p>
+    <div class="colophon">
+      <span>&copy; <span id="year">2026</span> Vantage Point Investigations · Abyssinian Intel · abyssinianintel.com</span>
+      <span>All rights reserved · Discretion assured</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ==========================================================================
+   404 page script — display only. Link targets are handled by <base> above,
+   so this page navigates correctly even with JavaScript disabled.
+   ========================================================================== */
+(function () {
+  'use strict';
+
+  // Show the path the visitor actually requested. textContent, never innerHTML:
+  // the URL is attacker-controllable and must never be parsed as markup.
+  var el = document.getElementById('req-path');
+  if (el) el.textContent = (location.pathname + location.search) || '/';
+
+  var y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

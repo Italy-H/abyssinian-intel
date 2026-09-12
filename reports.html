@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sample Dossiers — Abyssinian Intel | Vantage Point Investigations</title>
+<meta name="description" content="Interactive mock investigation dossiers demonstrating Vantage Point Investigations' report structure: executive summary, methodology, findings and timeline, and analytical conclusion.">
+<meta name="theme-color" content="#0B0C10">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" href="assets/Logo1.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="backdrop" aria-hidden="true"></div>
+
+<!-- ====================== HEADER ====================== -->
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Abyssinian Intel — home">
+      <img class="brand__mark" src="assets/Logo1.jpg" alt="Abyssinian Intel emblem">
+      <span class="brand__text">
+        <span class="brand__name">Abyssinian Intel</span>
+        <span class="brand__sub">Vantage Point Investigations</span>
+      </span>
+    </a>
+    <button class="nav__toggle" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+    <nav class="nav__links" id="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services &amp; Pricing</a>
+      <a href="reports.html">Sample Dossiers</a>
+      <a href="intake.html">Client Intake</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ====================== PAGE HEAD ====================== -->
+  <section class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">Archive Terminal // Demonstration Corpus</span>
+      <h1>Sample <span class="metal">Investigation Dossiers</span></h1>
+      <p class="lede mb-2">
+        Four demonstration case files showing exactly how a Vantage Point dossier is structured — what we report,
+        how we source it, how we rate confidence, and where we draw the line on what the evidence supports.
+      </p>
+
+      <div class="classified-bar" role="note">
+        Restricted Access — Classified Mock Dossiers · Illustrative Only · No Real Subject Data
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== TERMINAL ====================== -->
+  <section class="section" style="padding-top:1.5rem">
+    <div class="wrap">
+
+      <div class="notice notice--red mb-2" role="note">
+        <span class="notice__title">Demonstration Notice — Read First</span>
+        <p class="mb-0 small">
+          Every case file below is <strong>entirely fictional</strong>. All names, entities, addresses, case numbers,
+          identifiers, wallet addresses, domains, dates and amounts are invented to demonstrate report formatting and
+          analytical method. <strong>No real person, organisation, or investigation is described anywhere on this page.</strong>
+          Redaction blocks are shown where a live dossier would carry protected client or subject data — in a genuine
+          engagement, no client file is ever published, excerpted, or shown to a third party in any form.
+        </p>
+      </div>
+
+      <div class="terminal">
+
+        <!-- ---------- CASE DIRECTORY ---------- -->
+        <aside class="case-list" aria-label="Case file directory">
+          <div class="case-list__head">Case File Directory // 04 Records</div>
+          <div id="case-list" role="tablist" aria-orientation="vertical"></div>
+          <p class="small dim mt-2 mb-0" style="font-size:.72rem">
+            Archive access is simulated. Live case files are held offline under restricted access and are never
+            exposed to any web-facing system.
+          </p>
+        </aside>
+
+        <!-- ---------- DOSSIER VIEWER ---------- -->
+        <article class="dossier" id="dossier">
+          <header class="dossier__head">
+            <div>
+              <h2 class="dossier__title" id="dossier-title">Loading case file…</h2>
+              <div class="dossier__meta" id="dossier-meta"></div>
+            </div>
+            <span class="stamp stamp--amber" id="dossier-stamp">—</span>
+          </header>
+
+          <div class="tabs" id="dossier-tabs" role="tablist" aria-label="Dossier sections"></div>
+
+          <div class="dossier__body" id="dossier-body">
+            <noscript>
+              <div class="notice notice--red">
+                <span class="notice__title">JavaScript Required</span>
+                <p class="mb-0 small">The interactive dossier viewer needs JavaScript enabled. Sample reports can also
+                be requested by email from <a href="mailto:cases@abyssinianintel.com">cases@abyssinianintel.com</a>.</p>
+              </div>
+            </noscript>
+          </div>
+
+          <footer class="dossier__foot">
+            <span id="dossier-page">Page 1 of 4</span>
+            <span class="pager">
+              <button type="button" id="dossier-prev">‹ Prev Page</button>
+              <button type="button" id="dossier-next">Next Page ›</button>
+            </span>
+          </footer>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== HOW TO READ ====================== -->
+  <section class="section section--alt">
+    <div class="wrap">
+      <span class="eyebrow eyebrow--copper">Reading the Report</span>
+      <h2 class="mb-2">Confidence Ratings Explained</h2>
+      <p class="lede mb-2">
+        Every data point in a Vantage Point dossier carries one of four ratings. The rating is not decoration —
+        it tells you exactly how much weight the finding can carry.
+      </p>
+
+      <div class="table-scroll">
+        <table class="data-table">
+          <caption>Rating definitions</caption>
+          <thead>
+            <tr><th scope="col">Rating</th><th scope="col">Definition</th><th scope="col">How It Appears</th><th scope="col">How To Use It</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span style="color:var(--cyan)">Confirmed</span></td>
+              <td>Independently corroborated by two or more qualifying sources.</td>
+              <td>Stated as fact in findings.</td>
+              <td>Safe to rely on for decision-making.</td>
+            </tr>
+            <tr>
+              <td><span style="color:var(--cyan)">Corroborated</span></td>
+              <td>Supported by one strong source; second source unavailable or inconclusive.</td>
+              <td>Stated with explicit caveat.</td>
+              <td>Usable, but verify before acting irreversibly.</td>
+            </tr>
+            <tr>
+              <td><span style="color:var(--bronze)">Indicative</span></td>
+              <td>Pattern or inference only; no direct documentary support.</td>
+              <td>Flagged as a lead, never a finding.</td>
+              <td>Direction for further work. Not evidence.</td>
+            </tr>
+            <tr>
+              <td><span style="color:#E88B87">Unverified</span></td>
+              <td>Could not be substantiated from any available source.</td>
+              <td>Excluded from findings; disclosed as a gap.</td>
+              <td>Do not act on it. Absence of record ≠ absence of fact.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid grid--2 mt-2">
+        <div class="notice notice--cyan">
+          <span class="notice__title">Why We Publish Negative Findings</span>
+          <p class="mb-0 small">
+            "We searched and found nothing" is a result worth paying for. Every dossier lists what we searched and
+            came back empty on, so you can distinguish a clean record from an unsearched one. Absence of a public
+            record is never presented as proof that an event did not occur.
+          </p>
+        </div>
+        <div class="notice">
+          <span class="notice__title">Why We Publish Our Limitations</span>
+          <p class="mb-0 small">
+            Every dossier includes a Method Limitations section stating what we could not reach and why — sealed
+            records, jurisdictional gaps, probabilistic inference. An analyst who reports no limitations is either
+            not looking hard enough or not telling you the truth.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== CTA ====================== -->
+  <section class="section">
+    <div class="wrap center">
+      <span class="eyebrow">Open a File</span>
+      <h2>Your Case, Your Dossier</h2>
+      <p class="lede mb-2">
+        If the structure above matches what you need, submit a scope outline. Initial scoping review is
+        complimentary and carries no obligation.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="intake.html">Request Investigation</a>
+        <a class="btn btn--ghost" href="services.html">Review Service Tiers</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ====================== FOOTER ====================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:1rem">
+          <img class="brand__mark" src="assets/Logo1.jpg" alt="">
+          <span class="brand__text">
+            <span class="brand__name">Abyssinian Intel</span>
+            <span class="brand__sub">Vantage Point Investigations</span>
+          </span>
+        </a>
+        <p class="footer-note">
+          Open-source intelligence, public record analysis, digital footprint research
+          and analytical consulting. Discretion by default.
+        </p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services &amp; Pricing</a></li>
+          <li><a href="reports.html">Sample Dossiers</a></li>
+          <li><a href="intake.html">Client Intake</a></li>
+          <li><a href="intake.html#terms">Terms &amp; Lawful Use</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Routes</h4>
+        <ul>
+          <li><a href="mailto:contact@abyssinianintel.com">contact@abyssinianintel.com</a></li>
+          <li><a href="mailto:intake@abyssinianintel.com">intake@abyssinianintel.com</a></li>
+          <li><a href="mailto:cases@abyssinianintel.com">cases@abyssinianintel.com</a></li>
+          <li><a href="mailto:billing@abyssinianintel.com">billing@abyssinianintel.com</a></li>
+          <li><a href="mailto:legal@abyssinianintel.com">legal@abyssinianintel.com</a></li>
+          <li><a href="mailto:privacy@abyssinianintel.com">privacy@abyssinianintel.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Secure Comms</h4>
+        <p class="footer-note">
+          For sensitive material, request our PGP public key before transmitting. Do not send
+          identifying documents over unencrypted email.
+        </p>
+        <div class="pgp">
+          PGP FINGERPRINT<br>
+          32BE 6916 3E31 FA65 7C07&nbsp; D18D A926 3EB9 6D8C D476<br>
+        </div>
+      </div>
+    </div>
+
+    <div class="legal-block">
+      <p>
+        <strong>Non-PI Disclaimer.</strong> Vantage Point Investigations, operating under the Abyssinian Intel
+        brand, provides open-source intelligence (OSINT), public record analysis, digital footprint research,
+        and analytical consulting services. <strong>We are not licensed private investigators, and our services
+        do not constitute licensed private investigative work.</strong> We do not conduct surveillance, pretexting,
+        undercover operations, or any activity requiring a private investigator's license. Where a matter requires
+        licensed investigative work, we will say so and decline the engagement. Nothing on this site is legal advice.
+      </p>
+      <p>
+        <strong>Strict Confidentiality &amp; Discretion.</strong> All client communications, case files, subject
+        data, and work product are held in strict confidence. Files are stored under restricted access, handled
+        on a need-to-know basis, and are never sold, shared, syndicated, or disclosed to third parties except
+        where disclosure is compelled by valid legal process. Non-disclosure is our default posture and requires
+        no separate agreement. <strong>The dossiers on this page are fictional demonstrations; no genuine client
+        file is ever published or excerpted.</strong>
+      </p>
+      <p>
+        <strong>Lawful Use Policy.</strong> All research and services are conducted strictly in compliance with
+        applicable federal, state, and local laws and privacy regulations, and exclusively for lawful purposes.
+        We do not accept engagements intended to facilitate stalking, harassment, intimidation, domestic abuse,
+        discrimination, or any violation of a protective order. Our reports are not consumer reports and may not
+        be used to determine eligibility for credit, insurance, employment, or housing in any manner governed by
+        the Fair Credit Reporting Act (FCRA) or comparable statutes. We reserve the right to refuse or terminate
+        any engagement, without refund of work performed, where unlawful intent is indicated.
+      </p>
+      <div class="colophon">
+        <span>&copy; <span data-year>2026</span> Vantage Point Investigations · Abyssinian Intel · abyssinianintel.com</span>
+        <span>All rights reserved · Discretion assured</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/reports.js"></script>
+</body>
+</html>
