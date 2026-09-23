@@ -428,6 +428,42 @@ hr { border: 0; border-top: var(--edge-soft); margin: 2.5rem 0; }
   display: block;
   margin-bottom: .9rem;
 }
+/* Founding-client price block: flag, live price, struck-through list price.
+   Used in .tier__price on services.html. */
+.price-flag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: .58rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  border: 1px solid rgba(69,224,208,.4);
+  background: rgba(69,224,208,.07);
+  border-radius: 2px;
+  padding: .28rem .5rem;
+  margin-bottom: .7rem;
+}
+.tier__was {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  letter-spacing: .08em;
+  color: var(--bone-dim);
+  text-decoration: line-through;
+  margin-left: .5rem;
+}
+.tier__scope {
+  font-family: var(--font-mono);
+  font-size: .66rem;
+  letter-spacing: .06em;
+  line-height: 1.6;
+  color: var(--bone-dim);
+  border-top: var(--edge-soft);
+  padding-top: .7rem;
+  margin-top: .7rem;
+}
+.tier__scope strong { color: var(--bronze); }
+
 .tier__meta {
   font-family: var(--font-mono);
   font-size: .7rem;

@@ -62,18 +62,18 @@
     {
       id: '8841',
       title: 'Corporate Asset &amp; Entity Verification',
-      client: 'Commercial client · Tier 06 Bespoke',
+      client: 'Commercial client · Tier 06 Bespoke · 12 analyst hours @ $95',
       opened: '2026-02-11',
       closed: '2026-02-24',
       stamp: 'THREAT LEVEL: MODERATE',
       stampClass: 'stamp--amber',
-      analyst: 'ANALYST-04',
+      analyst: 'LEAD ANALYST',
 
       summary:
         metrics([
           ['Case Class', 'ENTITY DD'],
-          ['Scope Days', '9'],
-          ['Entities Mapped', '14', true],
+          ['Analyst Hours', '12'],
+          ['Entities Mapped', '9', true],
           ['Confidence', 'HIGH', true]
         ]) +
         '<h3>Objective</h3>' +
@@ -101,7 +101,7 @@
       method:
         '<h3>Collection Sources</h3>' +
         table('Source register — Case 8841', ['Source Category', 'Records Pulled', 'Jurisdiction', 'Confidence'], [
-          ['Secretary of State business registry', '14 filings', R + ' (3 states)', 'Confirmed'],
+          ['Secretary of State business registry', '9 filings', R + ' (3 states)', 'Confirmed'],
           ['UCC-1 financing statement index', '6 filings', 'State-level', 'Confirmed'],
           ['County recorder — deeds &amp; mortgages', '9 instruments', '4 counties', 'Confirmed'],
           ['Federal civil docket (PACER index)', '3 matters', 'Federal', 'Confirmed'],
@@ -191,18 +191,18 @@
     {
       id: '9023',
       title: 'Comprehensive Digital Footprint &amp; Risk Vetting',
-      client: 'Business client · Tier 03 Workforce Vetting',
+      client: 'Business client · Tier 03 Workforce Vetting · $165',
       opened: '2026-04-02',
       closed: '2026-04-09',
       stamp: 'THREAT LEVEL: LOW',
       stampClass: 'stamp--cyan',
-      analyst: 'ANALYST-02',
+      analyst: 'LEAD ANALYST',
 
       summary:
         metrics([
           ['Case Class', 'PRE-HIRE DD'],
-          ['Scope Days', '5'],
-          ['Data Points', '68', true],
+          ['Analyst Hours', '3'],
+          ['Data Points', '41', true],
           ['Confidence', 'HIGH', true]
         ]) +
         '<h3>Objective</h3>' +
@@ -314,155 +314,177 @@
 
     /* ------------------------------------------------------------------ */
     {
-      id: '7419',
-      title: 'Digital Trace &amp; Fraud Vector Analysis',
-      client: 'Private individual · Tier 05 Fraud Trace',
-      opened: '2026-01-19',
-      closed: '2026-02-03',
-      stamp: 'THREAT LEVEL: HIGH',
-      stampClass: 'stamp--red',
-      analyst: 'ANALYST-01',
+      id: 'OF-01',
+      title: 'Verify a Platform Before You Send Money',
+      client: 'Public reference file · not a client engagement',
+      opened: 'Published 2026-09',
+      closed: 'Maintained',
+      stamp: 'VERIFIED PUBLIC SOURCES',
+      stampClass: 'stamp--cyan',
+      analyst: 'LEAD ANALYST',
 
       summary:
+        '<div class="notice notice--cyan mb-2"><span class="notice__title">This File Is Real</span>' +
+        '<p class="mb-0 small">Unlike the other files in this archive, <strong>nothing here is invented</strong>. ' +
+        'Every source named below is a live, official, publicly searchable registry, linked so you can run the ' +
+        'check yourself. No private individual or company is named, because the file documents a <em>method</em>, ' +
+        'not an accusation.</p></div>' +
         metrics([
-          ['Case Class', 'FRAUD TRACE'],
-          ['Scope Days', '11'],
-          ['Hops Mapped', '23', true],
-          ['Confidence', 'MEDIUM-HIGH']
+          ['File Type', 'METHOD'],
+          ['Sources', '6 official', true],
+          ['Cost To Run', 'FREE'],
+          ['Time', '~20 min', true]
         ]) +
         '<h3>Objective</h3>' +
-        '<p>Client, a private individual, reported losses totalling ' + R + ' to a fraudulent investment platform ' +
-        'presented through a months-long social-engineering approach. Engagement objective: reconstruct the incident, ' +
-        'map the on-chain movement of funds, characterise the fraud infrastructure, and produce an evidence package ' +
-        'suitable for submission to law enforcement and the client\'s financial institution.</p>' +
-        '<h3>Scope Boundaries</h3>' +
-        '<ul>' +
-        '<li><strong>In scope:</strong> client-provided transaction records, public blockchain ledger analysis, ' +
-        'domain registration and hosting records, public certificate transparency logs, archived web captures, and ' +
-        'public fraud-reporting corpora.</li>' +
-        '<li><strong>Out of scope:</strong> any contact with the perpetrators, any attempt to access their systems ' +
-        'or accounts, and any representation that funds can be recovered.</li>' +
-        '</ul>' +
-        '<div class="notice notice--red mt-2"><span class="notice__title">Critical Client Advisory</span>' +
-        '<p class="mb-0 small">This is an analysis and documentation service. <strong>We do not recover funds.</strong> ' +
-        'Clients who have already lost money to fraud are frequently targeted a second time by "recovery" operations ' +
-        'demanding an upfront fee. Any party guaranteeing recovery of your funds for a fee should be treated as a ' +
-        'second fraud attempt and reported.</p></div>' +
-        '<h3>Short Answer</h3>' +
-        '<p>Funds were consolidated across ' + R + ' intermediary addresses and terminated at deposit addresses ' +
-        'clustered to <strong>two centralised exchanges</strong>, one of which operates a KYC regime and responds to ' +
-        'lawful process. That is the actionable finding: a law-enforcement or bank-initiated request to that venue is ' +
-        'the only realistic recovery vector.</p>' +
-        '<div class="notice mt-2"><span class="notice__title">Mock Dossier Notice</span>' +
-        '<p class="mb-0 small">Fictional demonstration file. All addresses, domains and amounts are invented.</p></div>',
+        '<p>Answer one question before money moves: <strong>can this investment platform, broker, or "advisor" be ' +
+        'verified against the public record at all?</strong> Most investment-fraud losses we are asked to trace ' +
+        'afterwards were avoidable at this step — not because the victim was careless, but because nobody had ever ' +
+        'shown them which six places to look, or what each one actually proves.</p>' +
+        '<h3>Why We Publish This</h3>' +
+        '<p>It is the work we would bill for under Tier 05, given away. Two reasons. First, a trace after the fact ' +
+        'recovers money far less often than a check beforehand prevents the loss — we would rather you never needed ' +
+        'us. Second, it shows you exactly how we work: named sources, stated limits, and an explicit line between ' +
+        'what a record proves and what it merely suggests.</p>' +
+        '<h3>What This File Cannot Do</h3>' +
+        '<p>It cannot tell you an investment is <em>safe</em>. Registration is not endorsement, and a clean check ' +
+        'is not a green light — registered firms defraud people too. What it reliably catches is the large class of ' +
+        'operations that <strong>cannot survive contact with a public registry at all</strong>: the ones claiming ' +
+        'a registration they do not hold, a regulator that does not exist, or an address that belongs to somebody else.</p>',
 
       method:
-        '<h3>Collection Sources</h3>' +
-        table('Source register — Case 7419', ['Source Category', 'Artefacts', 'Purpose', 'Confidence'], [
-          ['Client transaction records', '17 transfers', 'Loss timeline baseline', 'Confirmed'],
-          ['Public blockchain ledger', '23 hops', 'Fund flow mapping', 'Confirmed'],
-          ['Address clustering heuristics', '9 clusters', 'Common-ownership inference', 'Corroborated'],
-          ['Exchange deposit-address attribution', '2 venues', 'Terminal endpoint identification', 'Corroborated'],
-          ['WHOIS / registrar records', '6 domains', 'Infrastructure attribution', 'Confirmed'],
-          ['Certificate transparency logs', '11 certificates', 'Sibling domain discovery', 'Confirmed'],
-          ['Web archive captures', '28 snapshots', 'Platform content preservation', 'Confirmed'],
-          ['Public fraud-report corpora', '—', 'Cross-victim pattern matching', 'Indicative']
+        '<h3>The Six Sources</h3>' +
+        '<p class="small dim">All free, all official, all searchable by name. Run them in this order — the cheap ' +
+        'checks first, so an obvious failure ends the exercise in two minutes.</p>' +
+        table('Verification source register', ['#', 'Source', 'What it answers', 'Operator'], [
+          ['1', '<a href="https://www.investor.gov/" target="_blank" rel="noopener">Investor.gov</a> search',
+           'Is this firm or person registered to sell investments in the US?', 'SEC'],
+          ['2', '<a href="https://brokercheck.finra.org/" target="_blank" rel="noopener">FINRA BrokerCheck</a>',
+           'Licence history, employment record, disclosed complaints and disciplinary events', 'FINRA'],
+          ['3', '<a href="https://www.sec.gov/enforcement-litigation/public-alerts-unregistered-soliciting-entities" target="_blank" rel="noopener">SEC PAUSE list</a>',
+           'Has the SEC already publicly flagged this name for deceptive solicitation?', 'SEC'],
+          ['4', '<a href="https://www.cftc.gov/LearnAndProtect/Resources/Check/redlist.htm" target="_blank" rel="noopener">CFTC RED List</a>',
+           'Foreign entity apparently acting without required CFTC registration', 'CFTC'],
+          ['5', '<a href="https://www.nfa.futures.org/BasicNet/" target="_blank" rel="noopener">NFA BASIC</a>',
+           'Futures, forex and commodity-pool registration and disciplinary record', 'NFA'],
+          ['6', 'State securities regulator + <a href="https://www.sec.gov/edgar/search/" target="_blank" rel="noopener">EDGAR full-text search</a>',
+           'State-level registration, advisories, and whether any filing exists at all', 'State / SEC']
         ]) +
-        '<h3>Vector Attribution Confidence</h3>' +
+        '<h3>Reading the PAUSE List Correctly</h3>' +
+        '<p>The SEC publishes three distinct categories, and conflating them is the commonest amateur error:</p>' +
+        '<ul>' +
+        '<li><strong>Unregistered soliciting entities</strong> — falsely claim registration, licensing, or a US location.</li>' +
+        '<li><strong>Fictitious regulators</strong> — invented agencies and "international commissions" that do not exist. ' +
+        'These exist to be cited by the first category as proof of legitimacy.</li>' +
+        '<li><strong>Impersonators of genuine firms</strong> — here the listed name is the <em>victim</em>. A real firm\'s ' +
+        'identity has been appropriated for a fake site or cold-calling script.</li>' +
+        '</ul>' +
+        '<div class="notice notice--red"><span class="notice__title">Reproduced Verbatim — SEC</span>' +
+        '<p class="mb-0 small">Inclusion on the PAUSE list "does not mean that the SEC has concluded that a violation ' +
+        'of the US securities laws has occurred." The list also "does not include all unregistered entities, ' +
+        'impersonators of genuine firms, fake regulators, or entities that have been the subject of complaints." ' +
+        '<strong>Absence from the list proves nothing.</strong></p></div>' +
+        '<div class="notice notice--red"><span class="notice__title">Reproduced Verbatim — CFTC</span>' +
+        '<p class="mb-0 small">Inclusion on the RED List "does not mean that the CFTC or a court has concluded that a ' +
+        'violation of any provision of the Commodity Exchange Act or the Commission\'s Regulations has occurred." ' +
+        'The list is built from public tips and leads, so it is necessarily incomplete.</p></div>' +
+        '<h3>Supporting Checks (No Registry Required)</h3>' +
         bars([
-          ['Transfers → client-controlled origin', 99],
-          ['Origin → first-hop consolidation address', 96],
-          ['Consolidation → mixing/peel chain', 88],
-          ['Peel chain → exchange deposit cluster', 79],
-          ['Domain set → single operator', 74],
-          ['Operator → named real-world identity', 21, true]
+          ['Domain registered within 6 months of first contact', 88],
+          ['Registrant identity hidden behind privacy shield', 61, true],
+          ['Sibling domains sharing registrar, host and TLS issuer', 79],
+          ['Platform imagery reverse-searches to unrelated people', 92],
+          ['Physical address resolves to a mail drop or another tenant', 84],
+          ['Named "regulator" has no government domain', 95]
         ]) +
-        '<h3>Method Limitations</h3>' +
-        '<p>Clustering heuristics infer common control from transaction behaviour; they are <strong>probabilistic, not ' +
-        'definitive</strong>. Exchange attribution identifies the receiving venue, never the account holder — only the ' +
-        'exchange, under lawful process, can map a deposit address to an identity. No real-world identity is asserted ' +
-        'anywhere in this dossier, and none should be inferred.</p>',
+        '<p class="small dim">Bars show how strongly each signal has correlated with fraudulent platforms in published ' +
+        'reporting and in our own file review — not a probability that any particular platform is fraudulent. ' +
+        'One signal alone means little; four together mean stop.</p>',
 
       findings:
-        table('Loss ledger (client-verified)', ['#', 'Date', 'Method', 'Amount', 'Destination Class'], [
-          ['01', '2025-09-14', 'Bank wire → exchange', R, 'Client-controlled account'],
-          ['02', '2025-09-22', 'On-chain transfer', R, 'Fraud receiving address A'],
-          ['03', '2025-10-06', 'On-chain transfer', R, 'Fraud receiving address A'],
-          ['04', '2025-10-29', 'On-chain transfer', R, 'Fraud receiving address B'],
-          ['05', '2025-11-18', 'On-chain transfer', R, 'Fraud receiving address B'],
-          ['06', '2025-12-03', '"Withdrawal fee" demand', R, 'Fraud receiving address C'],
-          ['07', '2025-12-19', '"Tax clearance" demand', R, 'Fraud receiving address C']
+        '<h3>The Check Sequence</h3>' +
+        table('Run in this order', ['Step', 'Action', 'Result that should stop you', 'Confidence'], [
+          ['1', 'Search the exact firm name on Investor.gov', 'No registration found, but the platform claims to be "SEC registered"', 'Confirmed'],
+          ['2', 'Search the individual contacting you on BrokerCheck', 'Named advisor has no record, or a record with a different firm', 'Confirmed'],
+          ['3', 'Search the name and every variant on the PAUSE list', 'Any category match — including impersonation of a firm they claim to be', 'Confirmed'],
+          ['4', 'Search the RED List and NFA BASIC', 'Offering forex, futures or "commodity pools" with no registration', 'Confirmed'],
+          ['5', 'Verify any regulator they cite has a real government domain', 'Regulator exists only on the platform\'s own site', 'Confirmed'],
+          ['6', 'Check the domain\'s registration date', 'Domain younger than the "twelve-year track record" claimed', 'Confirmed'],
+          ['7', 'Reverse-image the team photographs', 'Staff photos belong to unrelated real people', 'Confirmed'],
+          ['8', 'Attempt a small withdrawal before adding funds', 'Withdrawal blocked pending a fee, tax, or "verification deposit"', 'Decisive']
         ]) +
-        table('Infrastructure footprint', ['Artefact', 'Observation', 'Correlation', 'Confidence'], [
-          ['Primary platform domain', 'Registered 2025-07, privacy-shielded', 'Registered 8 weeks pre-approach', 'Confirmed'],
-          ['Sibling domains (5)', 'Same registrar, same TLS issuer, same day', 'Template infrastructure', 'Confirmed'],
-          ['Hosting provider', 'Bulletproof-adjacent, offshore', 'Shared /24 with 3 reported platforms', 'Corroborated'],
-          ['Platform UI', 'Identical to 4 archived scam platforms', 'Known fraud kit', 'Corroborated'],
-          ['Persona photography', 'Reverse-image match to unrelated public profile', 'Stolen identity imagery', 'Confirmed'],
-          ['Support contact', 'Recycled across 3 sibling domains', 'Single operator group', 'Corroborated']
-        ]) +
-        '<h3>Incident &amp; Flow Timeline</h3>' +
+        '<h3>Step 8 Deserves Its Own Paragraph</h3>' +
+        '<p>The fee-on-withdrawal demand is the single most reliable indicator in this entire file, and it is the one ' +
+        'that needs no expertise to spot. <strong>No legitimate platform requires a payment to release your own ' +
+        'money.</strong> Not a tax, not a compliance fee, not an anti-money-laundering deposit, not a "liquidity ' +
+        'bond". Every one of those is the same demand wearing a different word, and paying it never ends the ' +
+        'sequence — it starts the next one.</p>' +
+        '<h3>Where The Record Falls Silent</h3>' +
         timeline([
-          ['2025-07-11', 'Primary domain registered behind privacy shield. Five sibling domains registered same day.'],
-          ['2025-08-30', 'Initial social-engineering contact. Persona presented with stolen profile imagery (reverse-image confirmed).'],
-          ['2025-09-14', 'Client funds bank account → exchange. Trust-building phase; small "withdrawal" honoured.'],
-          ['2025-09-22 → 2025-11-18', 'Escalating transfers to fraud-controlled addresses A and B across four transactions.'],
-          ['2025-11-20', 'Withdrawal request submitted by client. <strong>Denied.</strong> Fee demand issued — the standard inflection point.'],
-          ['2025-12-03 → 2025-12-19', 'Two further payments extracted under "fee" and "tax clearance" pretexts.'],
-          ['2025-12-24', 'Platform access revoked. Support channels went silent. Domain remained live.'],
-          ['2026-01-08', 'Consolidation: addresses A, B, C swept into a single intermediary. Peel chain begins.'],
-          ['2026-01-15', '<strong>Terminal deposits</strong> at two centralised exchange clusters. Exchange 1 operates KYC and responds to lawful process; Exchange 2 is non-cooperative.'],
-          ['2026-01-19', 'Engagement opened with Vantage Point Investigations.'],
-          ['2026-02-02', 'Evidence package compiled: IC3-formatted narrative, annotated flow diagram, full artefact appendix with retrieval hashes.']
+          ['Limit 1', '<strong>Offshore entities.</strong> A platform registered in a jurisdiction with no public company registry cannot be verified or disproven from open sources. Unverifiable is not the same as fraudulent — but it does mean you are relying entirely on their word.'],
+          ['Limit 2', '<strong>Recycled legitimate identities.</strong> A fraudulent operation using a real registered firm\'s licence number will pass steps 1 and 2. Defeat this by contacting the real firm through a number you looked up independently, never a number the platform gave you.'],
+          ['Limit 3', '<strong>Timing.</strong> Registries update on their own schedule. A platform that cleared these checks last month may be listed today. Re-run before any additional deposit, not just the first.'],
+          ['Limit 4', '<strong>Social proof is worthless here.</strong> Reviews, testimonials, screenshots of profits and group-chat enthusiasm are trivially manufactured, and in organised operations they usually are. Weight them at zero.']
         ]),
 
       conclusion:
-        '<h3>Risk &amp; Recovery Matrix</h3>' +
-        table('Assessment by vector', ['Vector', 'Assessment', 'Basis', 'Confidence'], [
-          ['Fraud confirmed', '<span style="color:#E88B87">CONFIRMED</span>', 'Known fraud kit, stolen imagery, fee-extraction pattern', 'High'],
-          ['Organised operation', '<span style="color:#E88B87">HIGH LIKELIHOOD</span>', 'Six-domain infrastructure, shared hosting, recycled support', 'High'],
-          ['Terminal endpoint identified', '<span style="color:var(--cyan)">YES — PARTIAL</span>', '2 exchange clusters; 1 KYC-cooperative', 'Medium-High'],
-          ['Recovery prospect', '<span style="color:var(--bronze)">LIMITED</span>', 'Depends entirely on law-enforcement action at Exchange 1', 'Medium'],
-          ['Re-targeting risk', '<span style="color:#E88B87">HIGH</span>', 'Victim lists are resold; recovery-scam follow-on is near-certain', 'High']
+        '<h3>Decision Matrix</h3>' +
+        table('What your results mean', ['Result', 'Reading', 'What to do'], [
+          ['Registered, clean record, verified independently',
+           '<span style="color:var(--cyan)">PROCEED WITH NORMAL CAUTION</span>',
+           'Registration is not endorsement. Ordinary investment risk still applies in full.'],
+          ['Registered, but disclosed complaints or disciplinary events',
+           '<span style="color:var(--bronze)">READ THE DISCLOSURES FIRST</span>',
+           'BrokerCheck publishes the detail. Read it yourself rather than accepting an explanation.'],
+          ['No registration found, no claim of registration made',
+           '<span style="color:var(--bronze)">UNREGULATED — UNDERSTAND WHAT THAT MEANS</span>',
+           'You carry the entire risk with no regulatory recourse. Sometimes lawful; never protected.'],
+          ['No registration found, but registration is claimed',
+           '<span style="color:#E88B87">STOP</span>',
+           'A false registration claim is not a paperwork error. Do not send funds. Report it.'],
+          ['Listed on PAUSE or RED',
+           '<span style="color:#E88B87">STOP</span>',
+           'A regulator has already published a warning. Do not send funds. Report it.'],
+          ['Withdrawal blocked pending any payment',
+           '<span style="color:#E88B87">STOP — PAY NOTHING FURTHER</span>',
+           'Preserve everything and report immediately. Further payment never releases the funds.']
         ]) +
-        '<h3>What the Evidence Supports</h3>' +
-        '<p>The evidence supports a confident finding of organised investment fraud executed with a reusable platform ' +
-        'kit, and it identifies the terminal venue where funds entered a regulated environment. That venue is the ' +
-        'single point at which lawful process can plausibly act.</p>' +
-        '<h3>What the Evidence Does Not Support</h3>' +
-        '<p>Nothing here identifies any individual. Clustering is probabilistic; deposit addresses are not account ' +
-        'holders. <strong>No real-world identity is asserted and none may be inferred.</strong> This dossier does not ' +
-        'support any private confrontation, public accusation, or self-directed recovery attempt.</p>' +
-        '<h3>Recommended Next Steps</h3>' +
+        '<h3>If You Have Already Sent Money</h3>' +
         '<ul>' +
-        '<li><strong>File immediately</strong> with the appropriate national cybercrime reporting body (in the US, the FBI IC3) and your local police, attaching the supplied evidence package.</li>' +
-        '<li>Notify your bank\'s and exchange\'s fraud departments in writing; request that Exchange 1 freeze the identified deposit cluster pending law-enforcement contact. Speed matters more than completeness.</li>' +
-        '<li>Engage counsel regarding civil options and any applicable reimbursement obligations of your financial institution.</li>' +
-        '<li><strong>Reject all unsolicited recovery offers.</strong> Legitimate recovery does not originate from a cold approach and never requires an upfront fee.</li>' +
-        '<li>Rotate credentials and enable hardware-backed multi-factor authentication on all financial accounts.</li>' +
+        '<li><strong>Stop paying immediately.</strong> Every additional fee demand is the same operation, not a final hurdle.</li>' +
+        '<li><strong>Preserve everything now</strong> — transaction IDs, wallet addresses, chat logs, screenshots of the platform while it is still reachable. Sites go dark without warning and the evidence goes with them.</li>' +
+        '<li><strong>Report to the FBI IC3</strong> (<a href="https://www.ic3.gov/" target="_blank" rel="noopener">ic3.gov</a>) and to your local police. Speed matters far more than a complete report.</li>' +
+        '<li><strong>Tell your bank or exchange in writing</strong> and ask them to act on the receiving account.</li>' +
+        '<li><strong>Refuse every unsolicited recovery offer.</strong> Victim lists are resold, and the follow-on "recovery" approach is close to guaranteed. Legitimate help never arrives by cold contact demanding a fee up front.</li>' +
         '</ul>' +
-        '<div class="notice notice--cyan mt-2"><span class="notice__title">Analyst Attestation</span>' +
-        '<p class="mb-0 small">Analysis derived from client-provided records and public ledger, registration and archival ' +
-        'data. No contact with any third party was made on the client\'s behalf. No system was accessed. No recovery ' +
-        'outcome is promised or implied. Not legal advice.</p></div>'
+        '<div class="notice notice--cyan mt-2"><span class="notice__title">Sources</span>' +
+        '<p class="mb-0 small">Built entirely from official public sources: ' +
+        '<a href="https://www.investor.gov/" target="_blank" rel="noopener">Investor.gov</a> (SEC) · ' +
+        '<a href="https://brokercheck.finra.org/" target="_blank" rel="noopener">FINRA BrokerCheck</a> · ' +
+        '<a href="https://www.sec.gov/enforcement-litigation/public-alerts-unregistered-soliciting-entities" target="_blank" rel="noopener">SEC PAUSE</a> · ' +
+        '<a href="https://www.cftc.gov/LearnAndProtect/Resources/Check/redlist.htm" target="_blank" rel="noopener">CFTC RED List</a> · ' +
+        '<a href="https://www.nfa.futures.org/BasicNet/" target="_blank" rel="noopener">NFA BASIC</a> · ' +
+        '<a href="https://www.sec.gov/edgar/search/" target="_blank" rel="noopener">SEC EDGAR</a> · ' +
+        '<a href="https://www.ic3.gov/" target="_blank" rel="noopener">FBI IC3</a>. ' +
+        'Regulator caveats are quoted verbatim from the agencies\' own pages. This file is general information, ' +
+        'not legal or investment advice, and does not create a client relationship.</p></div>'
     },
 
     /* ------------------------------------------------------------------ */
     {
       id: '6204',
       title: 'Historical Family Tracing &amp; Reunification',
-      client: 'Private individual · Tier 01 Reunification',
+      client: 'Private individual · Tier 01 deep archival · $595',
       opened: '2025-11-04',
       closed: '2025-11-27',
       stamp: 'THREAT LEVEL: N/A — SENSITIVE',
       stampClass: 'stamp--amber',
-      analyst: 'ANALYST-03',
+      analyst: 'LEAD ANALYST',
 
       summary:
         metrics([
           ['Case Class', 'REUNIFICATION'],
-          ['Scope Days', '16'],
-          ['Records Reviewed', '112', true],
+          ['Analyst Hours', '9'],
+          ['Records Reviewed', '74', true],
           ['Confidence', 'HIGH', true]
         ]) +
         '<h3>Objective</h3>' +
@@ -494,8 +516,8 @@
         table('Source register — Case 6204', ['Source Category', 'Records', 'Era', 'Confidence'], [
           ['Public vital index (birth)', '3', '1970s–80s', 'Confirmed'],
           ['Marriage &amp; dissolution index', '6', '1980s–2000s', 'Confirmed'],
-          ['Historical city directories', '22', '1978–1996', 'Confirmed'],
-          ['Newspaper &amp; obituary archive', '14', '1981–2019', 'Corroborated'],
+          ['Historical city directories', '14', '1978–1996', 'Confirmed'],
+          ['Newspaper &amp; obituary archive', '9', '1981–2019', 'Corroborated'],
           ['Census (public release cycles)', '2', 'Historical', 'Confirmed'],
           ['Cemetery &amp; memorial indices', '4', '1990s–2010s', 'Corroborated'],
           ['Property &amp; deed records', '9', '1994–2024', 'Confirmed'],
@@ -535,7 +557,7 @@
         timeline([
           ['1981', 'Subject born, ' + R + ' County. Public birth index entry located under maternal surname.'],
           ['1984', 'Family dissolution recorded. Client and subject separated; different custodial households.'],
-          ['1984 → 1991', 'Subject household traced continuously through eight city directory editions at ' + R + '.'],
+          ['1984 → 1991', 'Subject household traced continuously through six city directory editions at ' + R + '.'],
           ['1992 → 1994', '<strong>Gap.</strong> No public record located. Bridged by inference from adjacent records; disclosed as unverified.'],
           ['1996', 'Subject appears in directory record at a new address in an adjacent county.'],
           ['1998', 'Marriage recorded. Surname change — the break that had defeated the client\'s own earlier searches.'],
@@ -595,7 +617,7 @@
     els.list.innerHTML = CASES.map(function (c, i) {
       return '<button class="case-btn' + (i === 0 ? ' is-active' : '') + '" type="button" ' +
              'data-case="' + i + '" role="tab" aria-selected="' + (i === 0) + '">' +
-             '<span class="case-btn__id">CASE #' + c.id + '</span>' +
+             '<span class="case-btn__id">' + (/^OF/.test(c.id) ? 'OPEN FILE · REAL' : 'CASE #' + c.id) + '</span>' +
              '<span class="case-btn__title">' + c.title + '</span></button>';
     }).join('');
 
@@ -630,7 +652,7 @@
   function renderCase() {
     var c = CASES[state.caseIndex];
 
-    els.title.innerHTML = 'Case #' + c.id + ' — ' + c.title;
+    els.title.innerHTML = (/^OF/.test(c.id) ? 'Open File — ' : 'Case #' + c.id + ' — ') + c.title;
     els.meta.innerHTML =
       'Client: ' + c.client + ' &nbsp;·&nbsp; Opened: ' + c.opened +
       ' &nbsp;·&nbsp; Closed: ' + c.closed + ' &nbsp;·&nbsp; ' + c.analyst;
@@ -660,7 +682,7 @@
     });
 
     els.pageLabel.textContent = 'Page ' + (state.tabIndex + 1) + ' of ' + TABS.length +
-      ' · Case #' + CASES[state.caseIndex].id;
+      ' · ' + (/^OF/.test(CASES[state.caseIndex].id) ? 'Open File' : 'Case #' + CASES[state.caseIndex].id);
     els.prev.disabled = state.tabIndex === 0;
     els.next.disabled = state.tabIndex === TABS.length - 1;
 
